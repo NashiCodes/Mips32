@@ -184,3 +184,18 @@ fim_ordena:
     addi    $sp,                $sp,            24              # $sp = $sp + 24
     jr      $ra                                                 # retorna para o endereço de retorno
 
+
+valorAleatorio:
+    addi    $sp,                $sp,            -24             # $sp = $sp + -24
+    sw      $ra,                0($sp)                          # salva o valor de $ra na pilha
+    sw      $s0,                4($sp)                          # salva o valor de $s0 na pilha
+    sw      $s1,                8($sp)                          # salva o valor de $s1 na pilha
+    sw      $s2,                12($sp)                         # salva o valor de $s2 na pilha
+    sw      $s3,                16($sp)                         # salva o valor de $s3 na pilha
+    sw      $s4,                20($sp)                         # salva o valor de $s4 na pilha
+
+    move    $s0,                $a0                             # $s0 recebe parametro $a0
+    move    $s1,                $a1                             # $s1 recebe parametro $a1
+    move    $s2,                $a2                             # $s2 recebe parametro $a2
+    move    $s3,                $a3                             # $s3 recebe parametro $a3
+
